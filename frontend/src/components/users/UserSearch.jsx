@@ -7,7 +7,7 @@ const UserSearch = () => {
 
   const [text, setText] = useState('')
 
-  const { users } = useContext(GithubContext)
+  const { users, searchUsers } = useContext(GithubContext)
 
   const handleChange = (e) => setText(e.target.value)
 
@@ -17,6 +17,7 @@ const UserSearch = () => {
     if (text === '') {
       alert('Input field is blank!')
     } else {
+      searchUsers(text)
       setText('')
     }
   }
