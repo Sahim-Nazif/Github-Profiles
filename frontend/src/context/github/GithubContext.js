@@ -42,7 +42,7 @@ const searchUsers= async (text)=>{
 const getUser= async (login)=>{
     setLoading()
 
-    const response = await fetch (`${GITHUB_URL}/login/users/${login}`, {
+    const response = await fetch (`${GITHUB_URL}/users/${login}`, {
 
         headers:{
             authorization:`token=${GITHUB_TOKEN}`,
